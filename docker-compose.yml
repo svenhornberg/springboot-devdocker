@@ -1,0 +1,15 @@
+spring:
+  build: .
+  ports:
+    - "8080:8080"
+    - "8000:8000"
+  volumes:
+  # Path on the host, relative to the Compose file
+    - ./app:/app
+  links:
+    - mongodb
+
+mongodb:
+  image: mongo:latest
+  ports:
+    - "27017:27017"
