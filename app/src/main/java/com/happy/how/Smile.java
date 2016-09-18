@@ -1,6 +1,8 @@
 package com.happy.how;
 
 
+import java.math.BigInteger;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -17,7 +19,8 @@ import lombok.ToString;
 @ToString
 @Builder
 public class Smile {
-
 	
+	@Id
+	private BigInteger id;
 	private String name;
 }
